@@ -1,0 +1,43 @@
+<article class="card">
+  {{#if feature_image}}
+
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img src="{{feature_image}}" alt="{{title}}" />
+      </figure>
+    </div>
+  {{/if}}
+
+  <div class="card-content">
+    {{#foreach authors}}
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img src="{{profile_image}}" alt="Profile Image" />
+          </figure>
+        </div>
+      </div>
+    {{/foreach}}
+
+    <a href={{url}} class="title is-4">{{title}}</a>
+
+    <div class="content">
+      <p>
+        {{#if meta_description}}
+          {{meta_description}}
+        {{else}}
+          {{excerpt words="40"}}...
+        {{/if}}
+      </p>
+
+      <p>
+        {{authors}}
+        in
+        {{tags}}
+        at
+        <time>{{date}}</time>
+      </p>
+
+    </div>
+  </div>
+</article>

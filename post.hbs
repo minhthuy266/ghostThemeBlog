@@ -1,0 +1,27 @@
+{{!< default}}
+
+{{#post}}
+
+  <article>
+    <header
+      class="post__background-image"
+      style="background-image: url({{feature_image}});"
+    >
+      <div class="post__background-image-text">
+        <h1 class="title has-text-white">
+          {{title}}
+        </h1>
+      </div>
+      <time class="subtitle has-text-white">
+        {{date format="DD MMMM YYYY"}}
+      </time>
+    </header>
+
+    <section class="container">
+      <div class="content">
+        {{content}}
+      </div>
+    </section>
+  </article>
+
+{{/post}}
